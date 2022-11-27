@@ -6,7 +6,7 @@
         {{ with .Description }}
           {{ . }}
         {{ else }}
-          {{ .Summary }}
+          {{ .Summary | plainify -}}
           {{ if .Truncated }}
             <div class="post-content__read-more">
               <a href="{{ .RelPermalink }}">Read more ></a>
